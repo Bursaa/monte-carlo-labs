@@ -33,32 +33,32 @@ def update(frame):
     return (scat,)
 
 
-# s_values = [10, 5, 3, 1]
-# for i, k in enumerate(k_values):
-#     x_file = f"data/Zad1_x(i,t)_k={k}.txt"
-#     y_file = f"data/Zad1_y(i,t)_k={k}.txt"
+s_values = [10, 5, 3, 1]
+for i, k in enumerate(k_values):
+    x_file = f"data/Zad1_x(i,t)_k={k}.txt"
+    y_file = f"data/Zad1_y(i,t)_k={k}.txt"
 
-#     # Wczytanie danych
-#     x_data = np.loadtxt(x_file)
-#     y_data = np.loadtxt(y_file)
+    # Wczytanie danych
+    x_data = np.loadtxt(x_file)
+    y_data = np.loadtxt(y_file)
 
-#     # Przygotowanie wykresu
-#     fig, ax = plt.subplots()
-#     fig.suptitle(f"Rozpraszanie cząstek (k={k})")
-#     scat = ax.scatter([], [], s=s_values[i])
-#     ax.set_xlim(np.min(x_data), np.max(x_data))
-#     ax.set_ylim(np.min(y_data), np.max(y_data))
-#     ax.set_title("")
-#     ax.set_xlabel("x")
-#     ax.set_ylabel("y")
-#     # Funkcja aktualizująca ramkę
-#     # Tworzenie animacji
-#     ani = animation.FuncAnimation(
-#         fig, update, frames=range(0, x_data.shape[0], 5), interval=10, blit=True
-#     )
-#     ani.save(f"plots/animacja_ruchy_czastek_k={k}.gif", writer="pillow", fps=30)
+    # Przygotowanie wykresu
+    fig, ax = plt.subplots()
+    fig.suptitle(f"Rozpraszanie cząstek (k={k})")
+    scat = ax.scatter([], [], s=s_values[i])
+    ax.set_xlim(np.min(x_data), np.max(x_data))
+    ax.set_ylim(np.min(y_data), np.max(y_data))
+    ax.set_title("")
+    ax.set_xlabel("x")
+    ax.set_ylabel("y")
+    # Funkcja aktualizująca ramkę
+    # Tworzenie animacji
+    ani = animation.FuncAnimation(
+        fig, update, frames=range(0, x_data.shape[0], 5), interval=10, blit=True
+    )
+    ani.save(f"plots/animacja_ruchy_czastek_k={k}.gif", writer="pillow", fps=30)
 
-#     plt.close()  # opcjonalnie: nie pokazuj interaktywnie
+    plt.close()  # opcjonalnie: nie pokazuj interaktywnie
 
 
 Ra_arr = [0.1, 0.5]
