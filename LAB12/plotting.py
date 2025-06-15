@@ -136,7 +136,7 @@ for katalog_idx in range(1, 7):
     # XY
     fig_xy, ax_xy = plt.subplots()
     ani_xy = FuncAnimation(
-        fig_xy, make_xy_update(ax_xy, katalog_idx, ylim=[0.0, 0.5] if katalog_idx == 6 else None), frames=frames_range, interval=1000 / fps  # type: ignore
+        fig_xy, make_xy_update(ax_xy, katalog_idx, ylim=[0.0, 0.5] if katalog_idx == 6 else None, xlim=[0.0, 2.0] if katalog_idx == 6 else None), frames=frames_range, interval=1000 / fps  # type: ignore
     )
     ani_xy.save(f"plots/xy_animation_{katalog_idx}.mp4", writer="ffmpeg", fps=fps)
 

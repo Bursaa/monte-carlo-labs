@@ -62,7 +62,11 @@
     "numeric": "cpp",
     "sstream": "cpp",
     "chrono": "cpp",
-    "complex": "cpp"
+    "complex": "cpp",
+    "filesystem": "cpp",
+    "forward_list": "cpp",
+    "ratio": "cpp",
+    "unordered_set": "cpp"
   },
   "C_Cpp.errorSquiggles": "disabled"
 }
